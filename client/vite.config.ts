@@ -3,16 +3,17 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  root: path.resolve(__dirname, "client"), // 👈 Important
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      "@": path.resolve(__dirname, "client/src"), // 👈 Updated path
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
   build: {
-    outDir: "dist",
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
 });
