@@ -5,6 +5,7 @@ import PillarsSection from "@/components/pillars-section";
 import StatsSection from "@/components/stats-section";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
+import "./index.css";
 
 export default function Home() {
   return (
